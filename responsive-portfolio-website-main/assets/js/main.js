@@ -3,6 +3,7 @@ const navMenu = document.getElementById("nav-menu"),
   navItem = document.querySelectorAll(".nav__item"),
   header = document.getElementById("header");
 
+
 // open and close menu
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("nav__menu--open");
@@ -89,3 +90,4 @@ sr.reveal(".qualification__footer-text, .contact__content", {
 });
 
 sr.reveal(".qualification__footer .btn, .contact__btn", { origin: "right" });
+

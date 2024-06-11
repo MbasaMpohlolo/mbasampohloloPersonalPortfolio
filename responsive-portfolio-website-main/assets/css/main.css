@@ -50,14 +50,6 @@
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  color: Black;
-  font-weight: var(--fw-bold);
-}
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -481,10 +473,6 @@ body {
   color: var(--color-white);
   font-size: var(--fs-lg);
   margin-bottom: 1rem;
-}
-
-.project__description {
-  margin-bottom: 2rem;
 }
 
 .project__link {

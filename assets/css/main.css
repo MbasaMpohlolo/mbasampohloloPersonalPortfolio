@@ -1,3 +1,4 @@
+
 :root {
   /* Colors
   ____________________*/
@@ -579,57 +580,72 @@ body {
 
 /* Testimonials
 --------------------------------------------------------------*/
-.testimonial__card {
-  background-color: var(--color-bg-secondary);
-  box-shadow: var(--box-shadow);
-  padding: 3rem 5rem;
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
-  max-width: 50rem;
-  text-align: center;
-  justify-self: center;
-  margin-bottom: 2rem;
+  padding: 5rem 1rem;
+}
+.testimonial-container .testimonial-wrapper {
+  position: relative;
+  max-width: 90rem;
+  width: 100%;
+  padding: 5rem;
+}
+.testimonial-wrapper .testimonial-box {
+  padding: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
 }
 
-.testimonial__img {
-  max-width: 10rem;
+
+.testimonial-content .testimonial-slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--bg-color);
+  border-radius: 2rem;
+  box-shadow: 0 .1rem .5rem #00abf0;
+  padding: 3rem 5rem;
+  border-top: .8rem solid #00abf0;
+  border-bottom: .8rem solid #00abf0;
+}
+.testimonial-slide img {
+  width: 14rem;
+  height: 14rem;
+  object-fit: cover;
   border-radius: 50%;
-  margin: auto;
-  margin-bottom: 3rem;
+  border: .5rem  #00abf0;
+  outline: .5rem solid #00abf0;
+}
+.testimonial-slide h3 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  
+}
+.testimonial-slide p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.testimonial-box .swiper-button-next,
+.testimonial-box .swiper-button-prev {
+  color: #00abf0;
+}
+.testimonial-box .swiper-button-next {
+  right: 0;
+}
+.testimonial-box .swiper-button-prev {
+  left: 0;
+}
+.testimonial-box .swiper-pagination-bullet {
+  background: rgba(0, 0, 0, .8);
+}
+.testimonial-box .swiper-pagination-bullet-active {
+  background: var(--main-color);
 }
 
-.testimonial__description {
-  color: var(--color-white);
-  margin-bottom: 3rem;
-}
 
-.testimonial__name {
-  font-size: var(--fs-md);
-  margin-bottom: 0.5rem;
-}
-
-.testimonial__occupation {
-  font-size: var(--fs-sm);
-}
-
-/* testimonial slide */
-.testimonial__wrapper .swiper-wrapper {
-  padding-bottom: 5rem;
-}
-
-.testimonial__wrapper .swiper-pagination-bullets {
-  justify-content: space-around;
-}
-
-.testimonial__wrapper .swiper-pagination-bullet {
-  background-color: var(--color-text);
-  border-radius: 0;
-  width: 3rem;
-  height: 0.5rem;
-}
-
-.testimonial__wrapper .swiper-pagination-bullet-active {
-  background-color: var(--color-primary);
-}
 
 /* Contact
 --------------------------------------------------------------*/

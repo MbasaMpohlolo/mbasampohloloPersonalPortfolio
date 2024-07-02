@@ -30,32 +30,49 @@ function changeIcon() {
 }
 
 // Testimonial Slide
-
-const testimonialSlide = new Swiper(".testimonial__wrapper", {
-  loop: true,
-  spaceBetween: 30,
-  centeredSlides: true,
-  effect: "coverflow",
-  grabCursor: true,
+var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
+  spaceBetween: 30,
+  loop: true,
+  grabCursor: true,
   pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+      el: ".swiper-pagination",
+      clickable: true,
   },
-
-  breakpoints: {
-    520: {
-      slidesPerView: "auto",
-    },
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
   },
 });
+
+/*======== scroll reveal ====*/
+ScrollReveal({
+  distance: '80px',
+  duration: 2000,
+  delay: 200
+});
+
+ScrollReveal().reveal('.home-content, .heading', {
+  origin: 'top'
+});
+ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, contact form', {
+  origin: 'bottom'
+});
+ScrollReveal().reveal('.home-content h1, .about-img img', {
+  origin: 'left'
+});
+ScrollReveal().reveal('.home-content h3, .home-content p .about-content', {
+  origin: 'right'
+});
+
+/*MIXIT UP PLUGIN*/
+var containerEl = document.querySelector(".mix_container");
+var mixer = mixitup(containerEl, {
+  selectors: {
+    control: "[our-mixitup-control]",
+  },
+});
+
 
 // header scroll animation
 window.addEventListener("scroll", () => {

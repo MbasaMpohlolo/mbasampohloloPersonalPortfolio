@@ -11,16 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
  
  
     <!--= Remixicons=-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
  
     <!--= SwiperJS CSS =-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
  
  
     <!--= Main CSS =-->
+
     <link rel="stylesheet" href="assets/css/main.css">
  
 </head>
@@ -281,49 +288,38 @@
         </section>
  
         <!--= Testimonials =-->
-        <section id="testimonial" class="section testimonial">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Testimonials</h2>
-                    <span class="section__subtitle">What my colleags say</span>
-                </div>
-                <div class="testimonial__wrapper swiper">
- 
-                    <div class="swiper-wrapper">
-                        <!--= testimonial 1 = -->
-                        <div class="testimonial__card swiper-slide">
-                            <img src="./assets/img/Onwaba.png" >
-                            <div class="testimonial__content">
-                                <p class="testimonial__description"> </p>
-                                <h3 class="testimonial__name">Onwaba</h3>
-                                <span class="testimonial__occupation">Software Developer</span>
-                            </div>
+        <div class="testimonial-container">
+            <h2 class="heading">Valuable <span>Testimonial</span></h2>
+            <div class="testimonial-wrapper">
+                <div class="testimonial-box mySwiper">
+                    <div class="testimonial-content swiper-wrapper">
+                        <div class="testimonial-slide swiper-slide">
+                            <img src="assets/img/Onwaba.png" alt="">
+                            <h3>Chris</h3>
+                            <p>
+                            </p>
                         </div>
-                        <!--========= testimonial 2 ============ -->
-                        <div class="testimonial__card swiper-slide">
-                            <img src="./assets/img/Onwaba.png">
-                            <div class="testimonial__content">
-                                <p class="testimonial__description"></p>
-                                <h3 class="testimonial__name">Bukho</h3>
-                                <span class="testimonial__occupation">Web Developer </span>
-                            </div>
+                        <div class="testimonial-slide swiper-slide">
+                            <img src="assets/img/Onwaba.png" alt="">
+                            <h3>Onwaba Nobhitywana</h3>
+                                <p> 
+                                </p>
                         </div>
-                        <!--========= testimonial 3 ====== -->
-                        <div class="testimonial__card swiper-slide">
-                            <img src="./assets/img/Onwaba.png" >
-                            <div class="testimonial__content">
-                                <p class="testimonial__description"> </p>
-                                <h3 class="testimonial__name">Chrisaan</h3>
-                                <span class="testimonial__occupation">Web Developer
-                                </span>
-                            </div>
+                        <div class="testimonial-slide swiper-slide">
+                            <img src="assets/img/Onwaba.png" alt="">
+                            <h3>Zenani</h3>
+                            <p>
+                            </p>
                         </div>
                     </div>
+     
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </section>
- 
+        </div>  
+        
         <!--======= Contact =======-->
        
     <div class="contact" id="contact">
@@ -398,6 +394,12 @@
  
     <!--======= ScrollReveal ======-->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!--scroll reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+ 
+    <!--swiper js-->
+   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
  
     <!--====== Main JS =======-->
     <script>

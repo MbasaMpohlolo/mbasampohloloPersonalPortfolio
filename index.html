@@ -77,11 +77,11 @@
                 <div class="d-grid hero__wrapper">
                     <div class="hero__content">
                         <h1 class="hero__title">Hello, My name is <span class="name">Mbasa</span></h1>
-                         <h1 class="my-profession">I'm a <span class="typing">web designer</span></h1>
+                        <h2 id="aboutTitle">I am a <span id="dynamicText"></span></h2>
                         <p class="hero__description">  Welcome to my portfolio! I'm Mbasa Mpohlolo, a dedicated web developer
                              and network administrator with a passion for creating seamless digital experiences,
                              With a solid foundation in both front-end and back-end technologies .</p>
-                             <a href="#" class="btn btn--primary">Resume</a>
+                             <a href="Mbasa Mpohlolo CV.docx" class="btn btn--primary">Resume</a>
                     </div>
                     <img src="./assets/img/mbara.jpeg"  class="hero__image">
                 </div>
@@ -98,12 +98,11 @@
                 <div class="d-grid about__wrapper">
                     <div class="about__content">
                         <h3 id="aboutTitle" class="about__title">I'm a Network Administrator and Experienced Web Developer.</h3>
-
-                        <p class="about__description">As a network administrator with a wealth of experience in web development,
+                          <p class="about__description">As a network administrator with a wealth of experience in web development,
                              I bring a unique blend of skills to the table. With a focus on ensuring smooth network operations and security,
                              coupled with a deep understanding of web technologies, I thrive in creating efficient systems and delivering seamless digital experiences.
                               </p>
-                        <a href="#" class="btn btn--primary">Know More</a>
+                      
                     </div>
                     <div class="skills">
                         <h3 class="skills__title">Technologies I've been working with:</h3>
@@ -209,7 +208,7 @@
                             <i class="ri-layout-4-fill"></i>
                         </div>
                         <h3 class="service__title">Frontend<br>Development</h3>
-                        <a href="#" class="service__link">Know More</a>
+                      
                     </div>
                     <!--= service card 2 =-->
                     <div class="service__card">
@@ -217,7 +216,7 @@
                             <i class="ri-code-s-slash-line"></i>
                         </div>
                         <h3 class="service__title">Backend<br> Development</h3>
-                        <a href="#" class="service__link">Know More</a>
+                      
                     </div>
                     <!--= service card 3 =-->
                     <div class="service__card">
@@ -225,7 +224,6 @@
                             <i class="ri-pen-nib-fill"></i>
                         </div>
                         <h3 class="service__title">Network<br> Administrator</h3>
-                        <a href="#" class="service__link">Know More</a>
                     </div>
                 </div>
             </div>
@@ -244,7 +242,7 @@
                 <!-- First Row Projects -->
                 <div class="project__content">
                   <img src="./assets/img/TECH.png" alt="Techactronics Website">
-                  <h3 class="project__title">Techactronics Website</h3>
+                  <h3 class="project__title">Techfood Website</h3>
                   <p class="project__description"> </p>
                   <a href="#" class="project__link">View Project <i class="ri-arrow-right-line"></i></a>
                 </div>
@@ -289,7 +287,7 @@
  
         <!--= Testimonials =-->
         <div class="testimonial-container">
-            <h2 class="heading">Valuable <span>Testimonial</span></h2>
+            <h2 class="hero__title">Valuable <span>Testimonial</span></h2>
             <div class="testimonial-wrapper">
                 <div class="testimonial-box mySwiper">
                     <div class="testimonial-content swiper-wrapper">
@@ -322,31 +320,33 @@
         
         <!--======= Contact =======-->
        
-    <div class="contact" id="contact">
-        <div class="contact-text">
-            <h2>Contact<span>Me</span></h2>
-            <h4>Let's work together</h4>
-            <p>Thank you for visiting my portfolio! I'm excited to connect with you. Whether you have a project idea, need technical consultation, or simply want to discuss opportunities for collaboration, I'm here to help.</p>
-        
-            <div class="contact-icons">
-                <a href="#"><i class="bx bx1-facebook-circle"></i></a>
-                <a href="#"><i class="bx bx1-twitter"></i></a>
-                <a href="#"><i class="bx bx1-instagram"></i></a>
-                <a href="#"><i class="bx bx1-linkedin"></i></a>
+        <div class="contact" id="contact">
+            <div class="contact-text">
+                <h2>Contact <span>Me</span></h2>
+                <h4>Let's work together</h4>
+                <p>Thank you for visiting my portfolio! I'm excited to connect with you. Whether you have a project idea, need technical consultation, or simply want to discuss opportunities for collaboration, I'm here to help.</p>
+                
+                <div class="contact-icons">
+                    <a href="#"><i class="bx bx1-facebook-circle"></i></a>
+                    <a href="#"><i class="bx bx1-twitter"></i></a>
+                    <a href="#"><i class="bx bx1-instagram"></i></a>
+                    <a href="#"><i class="bx bx1-linkedin"></i></a>
+                </div>
             </div>
+            <div class="contact-form">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="8aff25fd-94c3-4138-be51-f070432d7def">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <input type="text" name="subject" placeholder="Enter Your Subject">
+                    <textarea name="message" id="message" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                    <input type="submit" value="Submit" class="send">
+                </form>
+            </div>
+            <div id="responseMessage"></div>
         </div>
-        <div class="contact-form">
-            <form action="#">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Enter your email" required>
-                <input type="text" placeholder="Enter Your Subject">
-                <textarea name="message" id="message" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
-               
-            </form>
-            <input type="submit" value="Submit" class="send">
-        </div>
-      </div>
-    </main>
+        </main>
+        
     <!--======== footer =====-->
     <footer id="footer" class="footer">
         <div class="container">
@@ -356,7 +356,7 @@
                     <ul class="footer__social-list">
                         <li class="footer__social-item">
                             <a href="#" class="footer__social-link">
-                                <i class="ri-facebook-fill"></i>
+                                <i class="ri-linkedIn-fill"></i>
                             </a>
                         </li>
                         <li class="footer__social-item">
@@ -388,10 +388,12 @@
             <p class="footer__copyright">&copy; 2024 Copyright. All Rights Reserved</p>
         </div>
     </footer>
- 
+     <script src="./assets/js/main.js"></script>
     <!--======= SwiperJS  ======-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
- 
+     
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!--======= ScrollReveal ======-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!--scroll reveal-->
@@ -401,26 +403,7 @@
    
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
  
-    <!--====== Main JS =======-->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Initialize Typed.js for dynamic text in the hero section
-            var typed = new Typed(".typed-text",{
-                strings: ["Web Developer", "UI/UX Designer", "Network Administrator"],
-                typeSpeed: 100,
-                backSpeed: 100,
-                backDelay: 1000,
-                loop: true
-            });
 
-            // Highlight specific words in the "About Me" section title
-            const aboutTitle = document.getElementById("aboutTitle");
-            let innerHTML = aboutTitle.innerHTML;
-            innerHTML = innerHTML.replace("Network Administrator", "<span class='highlight'>Network Administrator</span>");
-            innerHTML = innerHTML.replace("Web Developer", "<span class='highlight'>Web Developer</span>");
-            aboutTitle.innerHTML = innerHTML;
-        });
-    </script>
-</body>
+    
  
 </html>

@@ -60,7 +60,9 @@
   font-weight: 700;
   color:#00abf0;
 }
-h2,
+h2{
+  color:#00abf0;
+}
 h4 {
   color: Black;
   font-weight: var(--fw-bold);
@@ -372,7 +374,7 @@ body {
 
 .hero__description {
   font-size: rem; /* Normal font size for description */
-  color: #555; /* Medium color for description */
+  color: white; /* Medium color for description */
   margin-bottom: 1.5rem; /* Space below the description */
 }
 
@@ -474,7 +476,7 @@ body {
   font-size: var(--fs-lg);
   margin-bottom: 5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 10px solid var(--color-border);
 }
 
 .qualification__title {
@@ -493,13 +495,13 @@ body {
 }
 
 .qualification__footer {
-  border-top: 1px solid var(--color-border);
+  border-top: 10px solid var(--color-border);
   margin-top: 10rem;
   padding-top: 4rem;
   text-align: center;
 }
 
-.qualification__footer-text {
+.qualification__footer-text {           
   font-size: var(--fs-xl);
   font-weight: var(--fw-bold);
   color: var(--color-white);
@@ -624,6 +626,9 @@ body {
   margin: 2rem 0;
   
 }
+.testimonial-container h2{
+  color:white;
+}
 .testimonial-slide p {
   font-size: 1.4rem;
   text-align: center;
@@ -737,21 +742,37 @@ body {
   resize: none;
   height: 220px;
 }
-.send{
+.send {
   margin-left: 13rem;
   margin-top: 1rem;
   background: #0ef;
-  border: .2rem solid(#555557);
+  border: 0.2rem solid #555557;
   width: 260px;
   height: 50px;
   border-radius: 40px;
   font-size: 18px;
   color: #081b29;
   letter-spacing: 1px;
-  animation: slideTop is ease forwards;
+  animation: slideTop ease forwards; /* Removed "is" */
   animation-delay: 2s;
-  box-shadow: 0 0 5px #0ef,
+  box-shadow: 0 0 5px #0ef; /* Removed comma at the end */
 
+  /* Transition for smooth animation */
+  transition: box-shadow 0.3s ease;
+}
+
+.send:hover {
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan; /* Fixed the syntax */
+}
+#responseMessage {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .contact-form-container {
+    padding: 10px;
+  }
 }
 /* .contact-form form .send{
   display: inline-block;
@@ -770,10 +791,6 @@ body {
 } */
 
  
- .send:hover{
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan;
-}
 
 /* Footer
 --------------------------------------------------------------*/
@@ -844,7 +861,7 @@ body {
 --------------------------------------------------------------*/
 
 /* Medium devices*/
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 360px) {
   .service__wrapper {
     grid-template-columns: repeat(2, 250px);
     justify-content: center;
@@ -871,7 +888,7 @@ body {
   }
 
   .footer__wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -935,4 +952,77 @@ body {
   .footer__wrapper {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+@media (max-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-left: 15px;
+  }
+
+  .contact-text h2 {
+    font-size: 60px;
+  }
+
+  .contact-text h4 {
+    font-size: 18px;
+  }
+
+  .contact-text p {
+    font-size: 18px;
+  }
+
+  .contact-icons i {
+    margin: 10px 5px 10px 0;
+  }
+
+  .send {
+    margin-left: 0;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-text h2 {
+    font-size: 40px;
+  }
+
+  .contact-text h4 {
+    font-size: 16px;
+  }
+
+  .contact-text p {
+    font-size: 16px;
+  }
+
+  .contact-form form input, .contact-form form textarea {
+    width: 100%;
+  }
+
+  .send {
+    width: 180px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .about__content {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .about__title {
+    font-size: var(--fs-l);
+    margin-right: 8rem;
+  }
+  .about__description {
+    margin-bottom: 1.5rem;
+    margin-right: 8rem;
+  }
+  .about__content a{
+    margin-right: 8rem;
+  }
+
 }

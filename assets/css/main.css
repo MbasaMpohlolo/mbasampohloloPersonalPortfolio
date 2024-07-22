@@ -462,51 +462,124 @@ body {
 
 /* Qualification
 --------------------------------------------------------------*/
-.qualification__wrapper {
-  margin-bottom: 5rem;
-}
-
-.qualification__content {
-  row-gap: 5rem;
-}
-
-.qualification__name {
-  display: flex;
-  column-gap: 1rem;
-  font-size: var(--fs-lg);
-  margin-bottom: 5rem;
-  padding-bottom: 1rem;
-  border-bottom: 10px solid var(--color-border);
-}
-
-.qualification__title {
-  font-size: var(--fs-md);
-  font-weight: var(--fw-medium);
-  margin-bottom: 1rem;
-}
-
-.qualification__description {
-  margin-bottom: 2rem;
-}
-
-.qualification__date {
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-semibold);
-}
-
-.qualification__footer {
-  border-top: 10px solid var(--color-border);
-  margin-top: 10rem;
-  padding-top: 4rem;
+.resume__container .section__header {
   text-align: center;
 }
 
-.qualification__footer-text {           
-  font-size: var(--fs-xl);
-  font-weight: var(--fw-bold);
-  color: var(--color-white);
-  margin-bottom: 2rem;
+.resume__container .section__header::before {
+  content: "Resume";
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+.resume__container .section__description {
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.resume__tablist {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.resume__tablist .btn {
+  min-width: 150px;
+  background-color:#112e42;
+  border: none;
+}
+
+.resume__tablist .btn.active,
+.resume__tablist .btn:hover {
+  background-color:#00abf0;
+}
+
+.panel__grid {
+  /* display: grid; */
+  gap: 1rem;
+  display: none;
+}
+
+.panel__grid.active {
+  display: grid;
+  animation: show-panel 0.3s forwards;
+}
+
+.panel__grid.close {
+  animation: hide-panel 0.3s forwards;
+}
+
+@keyframes show-panel {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide-panel {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Additional styling for the containers */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container .panel__grid {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.panel__card {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--secondary-color-dark);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.panel__card:hover {
+  background-color:#00abf0;
+}
+
+.panel__card span {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color:#00abf0;
+  transition: 0.3s;
+}
+
+.panel__card:hover span {
+  color: var(--white);
+}
+
+.panel__card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.panel__card .section__description {
+  margin-bottom: 1rem;
+}
+
+
 
 /* Services
 --------------------------------------------------------------*/
@@ -668,7 +741,7 @@ body {
   text-align: center;
 }
 .contact-text h2 span{
-  color: #0ef;
+  color: #00abf0;
 }
 .contact-text h4{
   margin:15px 0;
@@ -743,9 +816,9 @@ body {
   height: 220px;
 }
 .send {
-  margin-left: 13rem;
+  margin-left: 0rem;
   margin-top: 1rem;
-  background: #0ef;
+  background: #00abf0;
   border: 0.2rem solid #555557;
   width: 260px;
   height: 50px;
@@ -755,14 +828,14 @@ body {
   letter-spacing: 1px;
   animation: slideTop ease forwards; /* Removed "is" */
   animation-delay: 2s;
-  box-shadow: 0 0 5px #0ef; /* Removed comma at the end */
+  box-shadow: 0 0 5px #00abf0; /* Removed comma at the end */
 
   /* Transition for smooth animation */
   transition: box-shadow 0.3s ease;
 }
 
 .send:hover {
-  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan; /* Fixed the syntax */
+  box-shadow: 0 0 5px #00abf0, 0 0 25px #00abf0, 0 0 50px #00abf0; /* Fixed the syntax */
 }
 #responseMessage {
   margin-top: 1rem;
@@ -813,6 +886,7 @@ body {
 .footer__social-list {
   display: flex;
   gap: 3rem;
+  color: white;
 }
 
 .footer__social-link {

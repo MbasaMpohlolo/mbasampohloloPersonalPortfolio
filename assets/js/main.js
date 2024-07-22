@@ -43,6 +43,102 @@ navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("nav__menu--open");
   changeIcon();
 });
+// qualitifaction
+
+// Add event listener to the tabList
+const tabList = document.querySelector(".resume__tablist");
+tabList.addEventListener("click", (e) => {
+  const tabIndex = e.target.dataset.tab;
+  if (!tabIndex) return;
+
+  // Toggle active class on tabs
+  const tabs = document.querySelectorAll("[data-tab]");
+  Array.from(tabs).forEach((tab) => {
+    if (tab.dataset.tab === tabIndex) {
+      tab.classList.add("active");
+    } else {
+      tab.classList.remove("active");
+    }
+  });
+
+  // Toggle active class on panels
+  const activePanel = document.querySelector(".panel__grid.active");
+  const toActivePanel = document.querySelector(`[data-panel="${tabIndex}"]`);
+  
+  if (activePanel.dataset.panel === tabIndex) return;
+  activePanel.classList.add("close");
+  activePanel.addEventListener(
+    "animationend",
+    (e) => {
+      activePanel.classList.remove("active");
+      activePanel.classList.remove("close");
+      toActivePanel.classList.add("active");
+    },
+    { once: true }
+  );
+});
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  loop: true,
+});
+
+ScrollReveal().reveal(".blog__card", {
+  ...scrollRevealOption,
+  interval: 500,
+});
+
+tabList.addEventListener("click", (e) => {
+  const tabIndex = e.target.dataset.tab;
+  if (!tabIndex) return;
+
+  const tabs = document.querySelectorAll("[data-tab]");
+  tabs.forEach((tab) => {
+    tab.classList.toggle("active", tab.dataset.tab === tabIndex);
+  });
+
+  const activePanel = document.querySelector(".panel__grid.active");
+  const toActivePanel = document.querySelector(`[data-panel="${tabIndex}"]`);
+
+  if (activePanel && activePanel.dataset.panel === tabIndex) return;
+
+  if (activePanel) {
+    activePanel.classList.remove("active");
+    activePanel.classList.add("closing");
+    activePanel.addEventListener(
+      "animationend",
+      () => {
+        activePanel.classList.remove("closing");
+        activePanel.style.display = "none";
+        toActivePanel.classList.add("active");
+        toActivePanel.style.display = "grid";
+      },
+      { once: true }
+    );
+  } else {
+    toActivePanel.classList.add("active");
+    toActivePanel.style.display = "grid";
+  }
+});
+  
+
+ 
+
+// Initialize Swiper
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  loop: true,
+});
+
+// Initialize ScrollReveal
+ScrollReveal().reveal(".blog__card", {
+  ...scrollRevealOption,
+  interval: 500,
+});
+
+
 
 // close the menu when the user clicks the nav links
 navItem.forEach((item) => {
@@ -64,7 +160,7 @@ function changeIcon() {
 }
 
 // Testimonial Slide
-var swiper = new Swiper(".mySwiper", {
+var Swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,

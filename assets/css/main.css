@@ -462,75 +462,55 @@ body {
 
 /* Qualification
 --------------------------------------------------------------*/
-.resume__container .section__header {
-  text-align: center;
+.qualification__wrapper {
+  margin-bottom: 5rem;
 }
 
-.resume__container .section__header::before {
-  content: "Resume";
-  left: 50%;
-  transform: translateX(-50%);
+.qualification__content {
+  row-gap: 5rem;
 }
 
-.resume__container .section__description {
-  max-width: 600px;
-  margin-inline: auto;
-  margin-bottom: 6rem;
-  text-align: center;
-}
-
-.resume__tablist {
-  margin-bottom: 2rem;
+.qualification__name {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  column-gap: 1rem;
+  font-size: var(--fs-lg);
+  margin-bottom: 5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
-.resume__tablist .btn {
-  min-width: 150px;
-  background-color:#112e42;
-  border: none;
+.qualification__title {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+  margin-bottom: 1rem;
 }
 
-.resume__tablist .btn.active,
-.resume__tablist .btn:hover {
-  background-color:#00abf0;
+.qualification__description {
+  margin-bottom: 2rem;
 }
 
-.panel__grid {
-  /* display: grid; */
-  gap: 1rem;
-  display: none;
+.qualification__date {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
 }
 
-.panel__grid.active {
-  display: grid;
-  animation: show-panel 0.3s forwards;
+.qualification__footer {
+  border-top: 1px solid var(--color-border);
+  margin-top: 10rem;
+  padding-top: 4rem;
+  text-align: center;
 }
 
-.panel__grid.close {
-  animation: hide-panel 0.3s forwards;
+.qualification__footer-text {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  margin-bottom: 2rem;
 }
 
-@keyframes show-panel {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
-@keyframes hide-panel {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+
+
 /* Additional styling for the containers */
 .container {
   display: flex;

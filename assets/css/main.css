@@ -641,6 +641,7 @@ body {
 .testimonial-container {
   display: flex;
   align-items: center;
+
   flex-direction: column;
   width: 100%;
   padding: 5rem 1rem;
@@ -661,6 +662,7 @@ body {
 .testimonial-content .testimonial-slide {
   display: flex;
   align-items: center;
+  padding-right: 1rem;
   flex-direction: column;
   background: var(--bg-color);
   border-radius: 2rem;

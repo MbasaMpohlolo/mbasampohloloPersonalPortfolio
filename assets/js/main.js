@@ -46,16 +46,27 @@ navToggle.addEventListener("click", () => {
 // qualitifaction
 
 
-  
-
- 
-
-// Initialize Swiper
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 30,
-  loop: true,
+  // testimonial swipper
+  const swiper = new Swiper('.testimonial-box,.mySwiper', {
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    autoplay: {
+        delay: 9 b                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   000,
+        disableOnInteraction: false,
+    },
 });
+
+
+
+
+
 
 // Initialize ScrollReveal
 ScrollReveal().reveal(".blog__card", {

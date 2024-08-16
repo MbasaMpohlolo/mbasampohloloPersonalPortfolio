@@ -5,12 +5,12 @@ const navMenu = document.getElementById("nav-menu"),
 
   document.addEventListener('DOMContentLoaded', function() {
     const toRotate = ["Fullstack Developer", "Web Developer", "UI/UX Designer", "Network Administrator"];
-    const period = 2000;  // Faster period for switching roles
+    const period = 900;  // Faster period for switching roles
     let loopNum = 0;
     let isDeleting = false;
     let text = '';
     let typingSpeed = 200;  // Consistent typing speed
-    let deletingSpeed = 50; // Fast deleting speed
+    let deletingSpeed = 10; // Fast deleting speed
 
     function tick() {
         let i = loopNum % toRotate.length;
@@ -58,7 +58,7 @@ navToggle.addEventListener("click", () => {
         clickable: true,
     },
     autoplay: {
-        delay: 9 b                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   000,
+        delay: 3,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             000,
         disableOnInteraction: false,
     },
 });

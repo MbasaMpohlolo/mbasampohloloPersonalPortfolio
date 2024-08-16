@@ -393,6 +393,56 @@
             <p class="footer__copyright">&copy; 2024 Copyright. All Rights Reserved</p>
         </div>
     </footer>
+    <script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toRotate = ["Fullstack Developer", "Web Developer", "UI/UX Designer", "Network Administrator"];
+    const period = 900;  // Faster period for switching roles
+    let loopNum = 0;
+    let isDeleting = false;
+    let text = '';
+    let typingSpeed = 200;  // Consistent typing speed
+    let deletingSpeed = 10; // Fast deleting speed
+
+    function tick() {
+        let i = loopNum % toRotate.length;
+        let fullText = toRotate[i];
+        text = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+
+        document.getElementById('dynamicText').innerHTML = text;
+
+        let delta = isDeleting ? deletingSpeed : typingSpeed;
+
+        if (!isDeleting && text === fullText) {
+            isDeleting = true;
+            delta = period; // Pause at full text before deleting
+        } else if (isDeleting && text === '') {
+            isDeleting = false;
+            loopNum++;
+            delta = typingSpeed;
+        }
+
+        setTimeout(tick, delta);
+    }
+
+    tick();
+});
+var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        loop: true,
+    });
+
+    </script>
      <script src= "assets/js/main.js"></script>
     <!--======= SwiperJS  ======-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
